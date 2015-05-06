@@ -8,15 +8,22 @@
 
 import UIKit
 
+enum SHGradientDirection {
+    case horizontal
+    case vertical
+}
+
 class SHGradientColorView: UIView {
     
     var startColor: UIColor
     var endColor: UIColor
+    var direction: SHGradientDirection
 
     // MARK: Designated initializer
-    init(frame: CGRect, startColor: UIColor, endColor: UIColor) {
+    init(frame: CGRect, startColor: UIColor, endColor: UIColor, direction: SHGradientDirection) {
         self.startColor = startColor
         self.endColor = endColor
+        self.direction = direction
         
         super.init(frame: frame)
         self.backgroundColor = UIColor.clearColor()
@@ -25,6 +32,7 @@ class SHGradientColorView: UIView {
     required init(coder aDecoder: NSCoder) {
         self.startColor = UIColor.clearColor()
         self.endColor = UIColor.clearColor()
+        self.direction = SHGradientDirection.horizontal
         
         super.init(coder: aDecoder)
         self.backgroundColor = UIColor.clearColor()
@@ -33,7 +41,7 @@ class SHGradientColorView: UIView {
     // MARK: Draw rect
     override func drawRect(rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
-        self.drawGradientHorizontallyInContext(context, forRect: rect)
+        self.drawGradientInContext(context, forRect: rect)
     }
 
     // MARK: Create gradient
@@ -46,15 +54,30 @@ class SHGradientColorView: UIView {
     }
     
     // MARK: Draw gradient
-    func drawGradientHorizontallyInContext(context: CGContext, forRect rect: CGRect) {
+    func drawGradientInContext(context: CGContext, forRect rect: CGRect) {
         CGContextSaveGState(context)
         
         let gradient = self.createGradient()
-        let startPoint = CGPointMake(CGRectGetMinX(rect), CGRectGetMidY(rect))
-        let endPoint = CGPointMake(CGRectGetMaxX(rect), CGRectGetMidY(rect))
-        CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, 0)
+        let range = self.rangeToDrawInRect(rect)
+        CGContextDrawLinearGradient(context, gradient, range.start, range.end, 0)
         
         CGContextRestoreGState(context)
     }
     
+    // MARK: Draw range
+    func rangeToDrawInRect(rect: CGRect) -> (start: CGPoint, end: CGPoint) {
+        var start = CGPointZero
+        var end = CGPointZero
+        
+        switch self.direction {
+        case .horizontal:
+            start = CGPointMake(CGRectGetMinX(rect), CGRectGetMidY(rect))
+            end = CGPointMake(CGRectGetMaxX(rect), CGRectGetMidY(rect))
+        case .vertical:
+            start = CGPointMake(CGRectGetMidX(rect), CGRectGetMinY(rect))
+            end = CGPointMake(CGRectGetMidX(rect), CGRectGetMaxY(rect))
+        }
+        
+        return (start, end)
+    }
 }

@@ -16,8 +16,8 @@ class ViewController: UIViewController {
         
         self.view.backgroundColor = UIColor.greenColor()
         
-        let frame = CGRectMake(10, 100, 300, 60)
-        let gradientColorView = SHGradientColorView(frame: frame, startColor: UIColor.yellowColor(), endColor: UIColor.blueColor())
+        let frame = CGRectMake(30, 100, 300, 60)
+        let gradientColorView = SHGradientColorView(frame: frame, startColor: UIColor.yellowColor(), endColor: UIColor.blueColor(), direction: SHGradientDirection.vertical)
         self.view.addSubview(gradientColorView)
     }
     
