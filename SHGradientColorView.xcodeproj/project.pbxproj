@@ -301,6 +301,7 @@
 				A88F74D01AF70F88009214F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
