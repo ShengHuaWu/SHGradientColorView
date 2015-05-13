@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "SHGradientColorView"
   s.version      = "0.0.1"
-  s.summary      = "A custom view and draw a gradient color between two colors."
+  s.summary      = "A gradient color view."
   s.description  = "A custom view and draw a gradient color between two colors."
   s.homepage     = "https://github.com/ShengHuaWu/SHGradientColorView"
 
@@ -66,7 +66,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "SHGradientColorView/Classes/*.{h,m}"
+  s.source_files  = "SHGradientColorView/Classes/*.swift"
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
