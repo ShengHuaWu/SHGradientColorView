@@ -8,24 +8,24 @@
 
 import UIKit
 
-enum SHGradientDirection {
+public enum SHGradientDirection {
     case horizontal
     case vertical
 }
 
-class SHGradientColorView: UIView {
+public class SHGradientColorView: UIView {
     
-    var startColor: UIColor {
+    public var startColor: UIColor {
         didSet {
             self.setNeedsLayout()
         }
     }
-    var endColor: UIColor {
+    public var endColor: UIColor {
         didSet {
             self.setNeedsLayout()
         }
     }
-    var direction: SHGradientDirection {
+    public var direction: SHGradientDirection {
         didSet {
             self.setNeedsLayout()
         }
@@ -34,7 +34,7 @@ class SHGradientColorView: UIView {
     private var backgroundImageView: UIImageView
 
     // MARK: Designated initializer
-    init(frame: CGRect, startColor: UIColor, endColor: UIColor, direction: SHGradientDirection) {
+    public init(frame: CGRect, startColor: UIColor, endColor: UIColor, direction: SHGradientDirection) {
         self.startColor = startColor
         self.endColor = endColor
         self.direction = direction
@@ -45,7 +45,7 @@ class SHGradientColorView: UIView {
         self.addSubview(self.backgroundImageView)
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         self.startColor = UIColor.clearColor()
         self.endColor = UIColor.clearColor()
         self.direction = SHGradientDirection.horizontal
@@ -57,7 +57,7 @@ class SHGradientColorView: UIView {
     }
     
     // MARK: Layouts
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         self.backgroundImageView.frame = self.bounds
         self.renderImageInBackgroundForRect(self.backgroundImageView.frame)

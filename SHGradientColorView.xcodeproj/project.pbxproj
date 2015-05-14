@@ -13,7 +13,35 @@
 		A88F74BC1AF70F88009214F4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A88F74BB1AF70F88009214F4 /* Images.xcassets */; };
 		A88F74BF1AF70F88009214F4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A88F74BD1AF70F88009214F4 /* LaunchScreen.xib */; };
 		A88F74D51AF71052009214F4 /* SHGradientColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88F74D41AF71052009214F4 /* SHGradientColorView.swift */; };
+		A8A31ADF1B048A4A00ED0D3E /* SHGradientColorViewFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = A8A31ADE1B048A4A00ED0D3E /* SHGradientColorViewFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8A31AF11B048A4A00ED0D3E /* SHGradientColorViewFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A31ADA1B048A4A00ED0D3E /* SHGradientColorViewFramework.framework */; };
+		A8A31AF21B048A4A00ED0D3E /* SHGradientColorViewFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A8A31ADA1B048A4A00ED0D3E /* SHGradientColorViewFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A8A31AFA1B048A5900ED0D3E /* SHGradientColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88F74D41AF71052009214F4 /* SHGradientColorView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A8A31AEF1B048A4A00ED0D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A88F74A71AF70F88009214F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8A31AD91B048A4A00ED0D3E;
+			remoteInfo = SHGradientColorViewFramework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A8A31AF81B048A4A00ED0D3E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A8A31AF21B048A4A00ED0D3E /* SHGradientColorViewFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A88F74AF1AF70F88009214F4 /* SHGradientColorView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHGradientColorView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +52,21 @@
 		A88F74BB1AF70F88009214F4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A88F74BE1AF70F88009214F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A88F74D41AF71052009214F4 /* SHGradientColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SHGradientColorView.swift; path = Classes/SHGradientColorView.swift; sourceTree = "<group>"; };
+		A8A31ADA1B048A4A00ED0D3E /* SHGradientColorViewFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SHGradientColorViewFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8A31ADD1B048A4A00ED0D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8A31ADE1B048A4A00ED0D3E /* SHGradientColorViewFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHGradientColorViewFramework.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A88F74AC1AF70F88009214F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8A31AF11B048A4A00ED0D3E /* SHGradientColorViewFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8A31AD61B048A4A00ED0D3E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				A88F74B11AF70F88009214F4 /* SHGradientColorView */,
+				A8A31ADB1B048A4A00ED0D3E /* SHGradientColorViewFramework */,
 				A88F74B01AF70F88009214F4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				A88F74AF1AF70F88009214F4 /* SHGradientColorView.app */,
+				A8A31ADA1B048A4A00ED0D3E /* SHGradientColorViewFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,7 +124,35 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		A8A31ADB1B048A4A00ED0D3E /* SHGradientColorViewFramework */ = {
+			isa = PBXGroup;
+			children = (
+				A8A31ADE1B048A4A00ED0D3E /* SHGradientColorViewFramework.h */,
+				A8A31ADC1B048A4A00ED0D3E /* Supporting Files */,
+			);
+			path = SHGradientColorViewFramework;
+			sourceTree = "<group>";
+		};
+		A8A31ADC1B048A4A00ED0D3E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8A31ADD1B048A4A00ED0D3E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A8A31AD71B048A4A00ED0D3E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8A31ADF1B048A4A00ED0D3E /* SHGradientColorViewFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		A88F74AE1AF70F88009214F4 /* SHGradientColorView */ = {
@@ -93,15 +162,35 @@
 				A88F74AB1AF70F88009214F4 /* Sources */,
 				A88F74AC1AF70F88009214F4 /* Frameworks */,
 				A88F74AD1AF70F88009214F4 /* Resources */,
+				A8A31AF81B048A4A00ED0D3E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A8A31AF01B048A4A00ED0D3E /* PBXTargetDependency */,
 			);
 			name = SHGradientColorView;
 			productName = SHGradientColorView;
 			productReference = A88F74AF1AF70F88009214F4 /* SHGradientColorView.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A8A31AD91B048A4A00ED0D3E /* SHGradientColorViewFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8A31AF71B048A4A00ED0D3E /* Build configuration list for PBXNativeTarget "SHGradientColorViewFramework" */;
+			buildPhases = (
+				A8A31AD51B048A4A00ED0D3E /* Sources */,
+				A8A31AD61B048A4A00ED0D3E /* Frameworks */,
+				A8A31AD71B048A4A00ED0D3E /* Headers */,
+				A8A31AD81B048A4A00ED0D3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SHGradientColorViewFramework;
+			productName = SHGradientColorViewFramework;
+			productReference = A8A31ADA1B048A4A00ED0D3E /* SHGradientColorViewFramework.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -113,6 +202,9 @@
 				ORGANIZATIONNAME = ShengHuaWu;
 				TargetAttributes = {
 					A88F74AE1AF70F88009214F4 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					A8A31AD91B048A4A00ED0D3E = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
 				};
@@ -131,6 +223,7 @@
 			projectRoot = "";
 			targets = (
 				A88F74AE1AF70F88009214F4 /* SHGradientColorView */,
+				A8A31AD91B048A4A00ED0D3E /* SHGradientColorViewFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -143,6 +236,13 @@
 				A88F74BA1AF70F88009214F4 /* Main.storyboard in Resources */,
 				A88F74BF1AF70F88009214F4 /* LaunchScreen.xib in Resources */,
 				A88F74BC1AF70F88009214F4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8A31AD81B048A4A00ED0D3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +259,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A8A31AD51B048A4A00ED0D3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8A31AFA1B048A5900ED0D3E /* SHGradientColorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8A31AF01B048A4A00ED0D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8A31AD91B048A4A00ED0D3E /* SHGradientColorViewFramework */;
+			targetProxy = A8A31AEF1B048A4A00ED0D3E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A88F74B81AF70F88009214F4 /* Main.storyboard */ = {
@@ -282,6 +398,48 @@
 			};
 			name = Release;
 		};
+		A8A31AF31B048A4A00ED0D3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SHGradientColorViewFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A8A31AF41B048A4A00ED0D3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SHGradientColorViewFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -302,6 +460,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A8A31AF71B048A4A00ED0D3E /* Build configuration list for PBXNativeTarget "SHGradientColorViewFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8A31AF31B048A4A00ED0D3E /* Debug */,
+				A8A31AF41B048A4A00ED0D3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
