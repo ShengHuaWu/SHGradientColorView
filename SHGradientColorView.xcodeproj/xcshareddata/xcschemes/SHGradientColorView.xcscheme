@@ -34,6 +34,20 @@
                ReferencedContainer = "container:SHGradientColorView.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A8A31AE31B048A4A00ED0D3E"
+               BuildableName = "SHGradientColorViewFrameworkTests.xctest"
+               BlueprintName = "SHGradientColorViewFrameworkTests"
+               ReferencedContainer = "container:SHGradientColorView.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "A88F74C31AF70F88009214F4"
                BuildableName = "SHGradientColorViewTests.xctest"
                BlueprintName = "SHGradientColorViewTests"
+               ReferencedContainer = "container:SHGradientColorView.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A8A31AE31B048A4A00ED0D3E"
+               BuildableName = "SHGradientColorViewFrameworkTests.xctest"
+               BlueprintName = "SHGradientColorViewFrameworkTests"
                ReferencedContainer = "container:SHGradientColorView.xcodeproj">
             </BuildableReference>
          </TestableReference>
