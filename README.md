@@ -17,3 +17,9 @@ You can use [CocoaPods](https://cocoapods.org/) to install _SHGradientColorView_
     pod "SHGradientColorView"
 
 - Remember to add _use_framework!_ in your _Podfile_.
+
+It's necessary to add the framework in your project, after installing.
+![addLibrary](https://raw.githubusercontent.com/ShengHuaWu/SHGradientColorView/master/Resources/AddLibrary.png)
+
+The last step is to import the framework in your code.
+![Import](https://raw.githubusercontent.com/ShengHuaWu/SHGradientColorView/master/Resources/Import.png)
