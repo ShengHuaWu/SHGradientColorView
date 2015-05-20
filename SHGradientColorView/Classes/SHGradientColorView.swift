@@ -15,6 +15,7 @@ public enum SHGradientDirection {
 
 public class SHGradientColorView: UIView {
     
+    // MARK: Public property
     public var startColor: UIColor {
         didSet {
             self.setNeedsLayout()
@@ -31,7 +32,8 @@ public class SHGradientColorView: UIView {
         }
     }
     
-    private var backgroundImageView: UIImageView
+    // MARK: Private property
+    private let backgroundImageView: UIImageView
 
     // MARK: Designated initializer
     public init(frame: CGRect, startColor: UIColor, endColor: UIColor, direction: SHGradientDirection) {
@@ -97,7 +99,7 @@ public class SHGradientColorView: UIView {
         return (start, end)
     }
     
-    // Render image
+    // MARK: Render image
     func renderImageInBackgroundForRect(rect: CGRect) {
         NSOperationQueue().addOperationWithBlock { () -> Void in
             UIGraphicsBeginImageContext(rect.size)
